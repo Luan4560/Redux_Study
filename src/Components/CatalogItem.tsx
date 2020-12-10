@@ -21,7 +21,7 @@ const CatalogItem: React.FC<ICatalogItemProps> = ({product}) => {
 
       <button 
       type="button"
-      onClick={() => handleAddProductToCart}
+      onClick={() => handleAddProductToCart()}
       >
         Comprar
         </button>
