@@ -1,8 +1,12 @@
 import React, {useEffect, useState } from 'react';
 
-import { IProduct } from '../store/modules/cart/types';
-import api from '../services/api';
-import CatalogItem from './CatalogItem';
+import { IProduct } from '../../store/modules/cart/types';
+import api from '../../services/api';
+import CatalogItem from '../CatalogItem/CatalogItem'
+import Header from '../../Components/Header'
+import BackgroundIMG from '../../assets/background_img.jpg'
+
+import {Container} from './style'
 
 const Catalog: React.FC = () => {
 
@@ -24,14 +28,15 @@ const Catalog: React.FC = () => {
   }, [])
 
   return (
-    <main>
-      <h1>Catalog</h1>
-
+    <>
+    <main >
+      <Header  title="Lojinha Maneira"/>
+        
       {catalog.map(product => (
-      <CatalogItem key={product.id} product={product}/>
-      ))}
-
+        <CatalogItem key={product.id} product={product}/>
+        ))}
     </main>
+  </>
   )
 }
 

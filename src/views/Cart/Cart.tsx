@@ -1,13 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { IState } from '../store'
-import { ICartItem } from '../store/modules/cart/types';
+import { IState } from '../../store'
+import { ICartItem } from '../../store/modules/cart/types';
 
 const Cart: React.FC = () => {
   const cart = useSelector<IState, ICartItem[]>(state => state.cart.items)
 
   return (
-    <table>
+    <table style={{border: '2px solid red'}}>
       <thead>
         <tr>
           <th>Produto</th>
